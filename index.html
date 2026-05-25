@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My To-do Dashboard</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f6fa;
+      color: #222;
+    }
+    .app {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 18px;
+    }
+    .hero {
+      background: #111;
+      color: #fff;
+      border-radius: 24px;
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.12);
+    }
+    .hero h1 { margin: 0 0 8px; font-size: 32px; }
+    .hero p { margin: 0; opacity: .8; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e7e7e7;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 8px 22px rgba(0,0,0,.06);
+    }
+    .card h2 {
+      margin: 0 0 14px;
+      font-size: 20px;
+    }
+    .task {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 10px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .task:last-child { border-bottom: 0; }
+    input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      accent-color: #111;
+    }
+    .task span { line-height: 1.45; }
+    .note {
+      margin-top: 24px;
+      padding: 16px 18px;
+      background: #fff7d1;
+      border: 1px solid #ffe28a;
+      border-radius: 16px;
+      font-size: 14px;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #f1f1f1;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <h1>My To-do Dashboard</h1>
+      <p>พื้นที่จัดการงาน เป้าหมาย และความคืบหน้าส่วนตัว</p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <span class="tag">Priority</span>
+        <h2>🔥 สำคัญ</h2>
+        <label class="task"><input type="checkbox"><span>ตั้งเป้าหมายเดือนนี้</span></label>
+        <label class="task"><input type="checkbox"><span>จัดลำดับงานสำคัญ</span></label>
+      </div>
+
+      <div class="card">
+        <span class="tag">Projects</span>
+        <h2>💻 โปรเจกต์</h2>
+        <label class="task"><input type="checkbox"><span>วางแผนโปรเจกต์ใหม่</span></label>
+        <label class="task"><input type="checkbox"><span>เรียน GitHub เพิ่ม</span></label>
+      </div>
+
+      <div class="card">
+        <span class="tag">Money</span>
+        <h2>📈 การเงิน</h2>
+        <label class="task"><input type="checkbox"><span>อัปเดตการลงทุน</span></label>
+      </div>
+
+      <div class="card">
+        <span class="tag">Ideas</span>
+        <h2>💡 ไอเดีย</h2>
+        <label class="task"><input type="checkbox"><span>เขียนไอเดียธุรกิจใหม่</span></label>
+      </div>
+    </section>
+
+    <div class="note">
+      หมายเหตุ: หน้านี้เป็น UI ตัวอย่างแบบ Static HTML ติ๊ก checkbox ได้บนหน้าเว็บ แต่ยังไม่บันทึกถาวร ถ้าต้องการบันทึกจริงให้แก้ไฟล์แล้ว Commit หรือพัฒนาต่อด้วย JavaScript/LocalStorage
+    </div>
+  </main>
+</body>
+</html>
